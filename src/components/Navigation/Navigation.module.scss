@@ -1,0 +1,18 @@
+.navigationWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: -80px;
+    .navList{
+        display: flex;
+        gap: 25px;
+        .link{
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+        }
+    }
+}

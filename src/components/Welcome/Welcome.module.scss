@@ -1,0 +1,27 @@
+.welcomeWrapper{
+    background-image: url('../../../public/img//generalback.png');
+    background-position: center;
+    background-size: cover;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    .title{
+        font-size: 65px;
+        color: #fff;
+        letter-spacing: 7px;
+        font-weight: bold;
+    }
+    .btnWrapper{
+        margin-top: 20px;
+        .btnBooking{
+            padding: 10px 35px;
+            font-size: 20px;
+            background-color: #03de1c;
+            border: none;
+            font-weight: 100;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

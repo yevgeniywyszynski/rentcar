@@ -6,7 +6,7 @@ const Navigation = () => {
     return(
         <div className={styles.navigationWrapper}>
             <div className={styles.logoWrapper}>
-                <img alt="logoPage" src='../../public/img/logo.png' />
+                <img className={styles.logoPage} alt="logoPage" src='/img/logo.png'/>
             </div>
             <nav className={styles.navigation}>
                 <ul className={styles.navList}>
