@@ -4,7 +4,7 @@ import styles from '../Home/Home.module.scss';
 const Home = () => {
     return(
         <div className={styles.homeWrapper}>
-            hello
+            <img src="/public/img/formimg.png" />
         </div>
     )
 }
