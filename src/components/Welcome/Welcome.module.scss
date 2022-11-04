@@ -5,7 +5,7 @@
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 180px;
-    padding-bottom: 180px;
+    padding-bottom: 150px;
     .title{
         font-size: 65px;
         color: #fff;
@@ -16,12 +16,16 @@
         margin-top: 20px;
         .btnBooking{
             padding: 10px 35px;
-            font-size: 20px;
+            font-size: 17px;
             background-color: #03de1c;
             border: none;
             font-weight: 100;
             color: #fff;
             cursor: pointer;
+            transition: 0.7s;
         }
+    }
+    .btnBooking:hover{
+        scale: (1.2);
     }
 }
