@@ -49,6 +49,9 @@ const Cars = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles.btnWrapper}>
+                <button type="button" className={styles.btnMore}>See More</button>
+            </div>
         </div>
     )
 }

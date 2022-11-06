@@ -12,7 +12,6 @@
         grid-template-columns: 1fr 1fr;
         padding-left: 150px;
         padding-right: 150px;
-        gap: 20px;
         align-items: center;
         .cars{
             text-align: center;
@@ -45,6 +44,18 @@
         }
         .cars:hover{
             box-shadow: 2px 5px 12px -1px rgba(66, 68, 90, 1);
+        }
+    }
+    .btnWrapper{
+        margin-top: 30px;
+        text-align: center;
+        .btnMore{
+            padding: 7px 25px;
+            border: none;
+            background-color: #282828;
+            font-size: 13px;
+            color: #fff;
+            cursor: pointer;
         }
     }
 }

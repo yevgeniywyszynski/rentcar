@@ -8,6 +8,7 @@ const Home = () => {
         <div className={styles.homeWrapper}>
             <Welcome />
             <Cars />
+            <Home />
         </div>
     )
 }
