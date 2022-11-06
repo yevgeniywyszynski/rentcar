@@ -1,4 +1,5 @@
 import React from "react";
+import About from "../About/About";
 import Cars from "../Cars/Cars";
 import styles from '../Home/Home.module.scss';
 import Welcome from "../Welcome/Welcome";
@@ -8,7 +9,7 @@ const Home = () => {
         <div className={styles.homeWrapper}>
             <Welcome />
             <Cars />
-            <Home />
+            <About />
         </div>
     )
 }

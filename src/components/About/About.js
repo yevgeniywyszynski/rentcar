@@ -20,7 +20,7 @@ const About = () => {
                 The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
                 </p>
             </div>
-            <button className={styles.readMore}>Read More</button>
+            <button className={styles.btnMore}>Read More</button>
         </div>
     )
 }
