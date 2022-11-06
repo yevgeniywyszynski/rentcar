@@ -6,6 +6,7 @@ import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Cars from '../Cars/Cars';
 import Portfolio from '../Portfolio/Portfolio';
+import BookingCar from '../BookingCar/BookingCar';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cars" element={<Cars />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/booking/:id" element={<BookingCar/>} />
           </Route>
         </Routes>
     </Router>

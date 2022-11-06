@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../About/About";
-import Cars from "../Cars/Cars";
+import Cars from "../Cars/CarsContainer";
+import FeaturedCars from "../FeaturedCars/FeaturedCars";
 import styles from '../Home/Home.module.scss';
 import Welcome from "../Welcome/Welcome";
 
@@ -10,6 +11,7 @@ const Home = () => {
             <Welcome />
             <Cars />
             <About />
+            <FeaturedCars />
         </div>
     )
 }
