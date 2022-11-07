@@ -1,5 +1,78 @@
-.cars{
-    background-image: url('../../../public/img/carslide.png');
-    background-size: cover;
-    padding: 130px;
+.carsWrapper{
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 70px;
+    margin: 0 auto;
+    .title{
+        margin-top: 70px;
+        font-size: 60px;
+        margin-bottom: 70px;
+    }
+    .cars{
+        padding-right: 40px;
+        transition: 0.7s;
+        cursor: pointer;
+        position: relative;
+        .circleWrapper{
+            background-color: #000;
+            color: #fff;
+            font-size: 30px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0%;
+            left: 45%;
+            transform: translate(-45%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .imgWrapper{
+            background-color: #edeeed;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 60px;
+            margin-bottom: 40px;
+            text-align: center;
+            transition: 0.7s;
+            .imgCar{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .priceWrapper{
+                margin: 0 auto;
+                width: 50%;
+                background-color: #03de1c;
+                padding: 20px;
+                transition: 0.7s;
+                color: #fff;
+                line-height: 20px;
+                transition: 0.7s;
+                .priceBefore{
+                    font-size: 15px;
+                    border-bottom: 2px solid #fff;
+                }
+            }
+        }
+        .imgWrapper:hover{
+            background-color: #03de1c;
+            .priceWrapper{
+                background-color: #fff;
+                color: #000;
+                .priceBefore{
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+        .descriptionCar{
+            line-height: 25px;
+            font-weight: 300;
+            .modelName{
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }

@@ -10,8 +10,9 @@ const FeaturedCars = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
     };
 
     return(
@@ -19,22 +20,107 @@ const FeaturedCars = () => {
             <p className={styles.title}>Featured Cars</p>
             <Slider {...settings}>
                 <div className={styles.cars}>
-                    <h3>1</h3>
+                    <div className={styles.circleWrapper}>
+                        <p className={styles.slideNumber}>1</p>
+                    </div>
+                    <div className={styles.imgWrapper}>
+                        <img className={styles.imgCar} alt="car" src={'img/carslide.png'}></img>
+                        <div className={styles.priceWrapper}>
+                            <p className={styles.priceBefore}>$80000.00</p>
+                            <p className={styles.priceAfter}>$70000.00</p>
+                        </div>
+                    </div>
+                    <div className={styles.descriptionCar}>
+                        <p className={styles.modelName}>BEST AUDI CAR</p>
+                        <p className={styles.description}>
+                            There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour
+                        </p>
+                    </div>
                 </div>
                 <div className={styles.cars}>
-                    <h3>2</h3>
+                    <div className={styles.circleWrapper}>
+                        <p className={styles.slideNumber}>2</p>
+                    </div>
+                    <div className={styles.imgWrapper}>
+                        <img className={styles.imgCar} alt="car" src={'img/carslide.png'}></img>
+                        <div className={styles.priceWrapper}>
+                            <p className={styles.priceBefore}>$80000.00</p>
+                            <p className={styles.priceAfter}>$70000.00</p>
+                        </div>
+                    </div>
+                    <div className={styles.descriptionCar}>
+                        <p className={styles.modelName}>BEST AUDI CAR</p>
+                        <p className={styles.description}>
+                            There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour
+                        </p>
+                    </div>
+                
                 </div>
                 <div className={styles.cars}>
-                    <h3>3</h3>
+                    <div className={styles.circleWrapper}>
+                        <p className={styles.slideNumber}>3</p>
+                    </div>
+                    <div className={styles.imgWrapper}>
+                        <img className={styles.imgCar} alt="car" src={'img/carslide.png'}></img>
+                        <div className={styles.priceWrapper}>
+                            <p className={styles.priceBefore}>$80000.00</p>
+                            <p className={styles.priceAfter}>$70000.00</p>
+                        </div>
+                    </div>
+                    <div className={styles.descriptionCar}>
+                        <p className={styles.modelName}>BEST AUDI CAR</p>
+                        <p className={styles.description}>
+                            There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour
+                        </p>
+                    </div>
+                
                 </div>
                 <div className={styles.cars}>
-                    <h3>4</h3>
+                    <div className={styles.circleWrapper}>
+                        <p className={styles.slideNumber}>4</p>
+                    </div>
+                    <div className={styles.imgWrapper}>
+                        <img className={styles.imgCar} alt="car" src={'img/carslide.png'}></img>
+                        <div className={styles.priceWrapper}>
+                            <p className={styles.priceBefore}>$80000.00</p>
+                            <p className={styles.priceAfter}>$70000.00</p>
+                        </div>
+                    </div>
+                    <div className={styles.descriptionCar}>
+                        <p className={styles.modelName}>BEST AUDI CAR</p>
+                        <p className={styles.description}>
+                            There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour
+                        </p>
+                    </div>
                 </div>
                 <div className={styles.cars}>
-                    <h3>5</h3>
-                </div>
-                <div className={styles.cars}>
-                    <h3>6</h3>
+                    <div className={styles.circleWrapper}>
+                        <p className={styles.slideNumber}>5</p>
+                    </div>
+                    <div className={styles.imgWrapper}>
+                        <img className={styles.imgCar} alt="car" src={'img/carslide.png'}></img>
+                        <div className={styles.priceWrapper}>
+                            <p className={styles.priceBefore}>$80000.00</p>
+                            <p className={styles.priceAfter}>$70000.00</p>
+                        </div>
+                    </div>
+                    <div className={styles.descriptionCar}>
+                        <p className={styles.modelName}>BEST AUDI CAR</p>
+                        <p className={styles.description}>
+                            There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour
+                        </p>
+                    </div>
+                
                 </div>
             </Slider>
         </div>
