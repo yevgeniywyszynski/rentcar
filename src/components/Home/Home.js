@@ -3,6 +3,7 @@ import About from "../About/About";
 import Cars from "../Cars/CarsContainer";
 import FeaturedCars from "../FeaturedCars/FeaturedCars";
 import styles from '../Home/Home.module.scss';
+import Portfolio from "../Portfolio/Portfolio";
 import Welcome from "../Welcome/Welcome";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Cars />
             <About />
             <FeaturedCars />
+            <Portfolio />
         </div>
     )
 }
