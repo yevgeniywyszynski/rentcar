@@ -4,7 +4,7 @@ import Layout from '../Layout/Layout';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
-import Cars from '../Cars/Cars';
+import Cars from '../Cars/CarsContainer';
 import Portfolio from '../Portfolio/Portfolio';
 import BookingCar from '../BookingCar/BookingCar';
 

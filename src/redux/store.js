@@ -8,28 +8,32 @@ const initalState = {
             imgCar: 'img/car-1.png',
             carType: 'Sedan',
             price: 3000,
-            model: 'TOYOTA'
+            model: 'TOYOTA',
+            isFuture: false
         },
         {
             idCar: 2,
             imgCar: 'img/car-2.png',
             carType: 'Sport Car',
             price: 5000,
-            model: 'BMW'
+            model: 'BMW',
+            isFuture: false,
         },
         {
             idCar: 3,
             imgCar: 'img/car-3.png',
             carType: 'Sport Car',
             price: 10000,
-            carName: 'Ferarri'
+            carName: 'Ferarri',
+            isFuture: false
         },
         {
             idCar: 4,
             imgCar: 'img/car-4.png',
             carType: 'SUV',
             price: 1600,
-            carName: 'AUDI'
+            carName: 'AUDI',
+            isFuture: false
         }
     ]
 }
