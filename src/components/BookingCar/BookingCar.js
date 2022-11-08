@@ -51,14 +51,17 @@ const getPrices = () => {
 
     }
 return(   
-<div className={styles.dataWrapper}>
-<Eventcalendar 
-    controls={['calendar', 'time']}
-    labels={singleLabels}
-    invalid={singleInvalid}
-/>
-</div>                     
-)
+    <div className={styles.dataWrapper}>
+        <div className={styles.bookinCarWrapper}>
+            <img className={styles.carImg} src={'/img/car-2.png'}></img>
+        </div>
+        <Eventcalendar className={styles.calendarStyle}
+            controls={['calendar', 'time']}
+            labels={singleLabels}
+            invalid={singleInvalid}
+        />
+    </div>                     
+    )
 }
 
 export default BookingCar;

@@ -1,4 +1,11 @@
 .dataWrapper{
-    height: 300px;
-    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    align-items: center;
+}
+.calendarStyle{
+    width: 400px;
 }
