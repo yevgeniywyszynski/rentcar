@@ -1,9 +1,38 @@
-.navigationWrapper{
+.navigationMainPage{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #000;
+    .navList{
+        display: flex;
+        .link{
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+            transition: 0.4s;
+            padding-top:40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+        }
+        .link:hover{
+            background-color: #03de1c;
+            padding-top:40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.navigationWrapper{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-bottom: -80px;
     .navList{
         display: flex;

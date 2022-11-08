@@ -1,10 +1,13 @@
 import React from "react";
 import styles from '../Navigation/Navigation.module.scss';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 const Navigation = () => {
+    const location = useLocation();
+    console.log('location', location)
+
     return(
-        <div className={styles.navigationWrapper}>
+        <div className={`${styles.navigationMainPage} ${location.pathname === '/' ? styles.navigationWrapper : styles.navigationMainPage}`}>
             <div className={styles.logoWrapper}>
                 <img className={styles.logoPage} alt="logoPage" src='/img/logo.png'/>
             </div>
