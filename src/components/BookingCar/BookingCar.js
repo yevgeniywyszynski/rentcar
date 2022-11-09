@@ -52,14 +52,71 @@ const getPrices = () => {
     }
 return(   
     <div className={styles.dataWrapper}>
-        <div className={styles.bookinCarWrapper}>
-            <img className={styles.carImg} src={'/img/car-2.png'}></img>
+        <div className={styles.bookingCarWrapper}>
+            <div className={styles.bookinImgWrapper}>
+                <img className={styles.carImg} src={'/img/car-2.png'}></img>
+            </div>
+            <Eventcalendar className={styles.calendarStyle}
+                controls={['calendar', 'time']}
+                labels={singleLabels}
+                invalid={singleInvalid}
+            />
         </div>
-        <Eventcalendar className={styles.calendarStyle}
-            controls={['calendar', 'time']}
-            labels={singleLabels}
-            invalid={singleInvalid}
-        />
+        <div className={styles.carInformationWrapper}>
+            <div className={styles.modelWrapper}>
+                <p className={styles.model}>BMW i8</p>
+                <div className={styles.wrapperIcon}>
+                    <div className={styles.ratingWrapper}>
+                        <p className={styles.rating}>8.9</p>
+                    </div>
+                    <p className={styles.ratingComent}>Excellent</p>
+                </div>
+            </div>
+            <p className={styles.booksInfo}>Rental Period</p>
+            <p className={styles.period}>6 days</p>
+
+            <div className={styles.featuresWrapperBooks}>
+                
+                <div className={styles.featuresWrapper}>
+                    <p className={styles.booksInfo}>Vehicle Features</p>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icone} src='/img/air-conditioner (1).png'></img>
+                        <p className={styles.features}>Air conditioning</p>
+                    </div>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icone} src='/img/manual-transmission (2).png'></img>
+                        <p className={styles.features}>Manual</p>
+                    </div>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icon} src='/img/car-door.png'></img>
+                        <p className={styles.features}>Doors</p>
+                    </div>
+                </div>
+
+                <div className={styles.featuresWrapper}>
+                    <p className={styles.booksInfo}>Capacity</p>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icon} src='/img/car-seat.png'></img>
+                        <p className={styles.features}>5 Seats</p>
+                    </div>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icon} src='/img/suitcase (1).png'></img>
+                        <p className={styles.features}>1 Suitcase</p>
+                    </div>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icon} src='/img/shopping-bag.png'></img>
+                        <p className={styles.features}>2 Bags</p>
+                    </div>
+                </div>
+                <div className={styles.featuresWrapper}>
+                    <p className={styles.booksInfo}>Minimum age of driver</p>
+                    <div className={styles.wrapperIcon}>
+                        <img className={styles.icon} src='/img/id-card.png'></img>
+                        <p className={styles.features}>21 years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>                     
     )
 }

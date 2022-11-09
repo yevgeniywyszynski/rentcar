@@ -9,7 +9,7 @@ const Navigation = () => {
     return(
         <div className={`${styles.navigationMainPage} ${location.pathname === '/' ? styles.navigationWrapper : styles.navigationMainPage}`}>
             <div className={styles.logoWrapper}>
-                <img className={styles.logoPage} alt="logoPage" src='/img/logo.png'/>
+                <Link className={styles.link} to="/"><img className={styles.logoPage} alt="logoPage" src='/img/logo.png'/></Link>
             </div>
             <nav className={styles.navigation}>
                 <ul className={styles.navList}>

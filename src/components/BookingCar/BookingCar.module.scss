@@ -1,10 +1,67 @@
-.dataWrapper{
+.bookingCarWrapper{
     display: flex;
     justify-content: space-between;
     padding-left: 150px;
     padding-right: 150px;
     padding-top: 50px;
     align-items: center;
+}
+.carInformationWrapper{
+    padding-left: 150px;
+    .modelWrapper{
+        display: flex;
+        align-items: center;
+    }
+    .model{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .booksInfo{
+        font-size: 20px;
+        color: #73787E;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    .period{
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    .featuresWrapperBooks{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+    .wrapperIcon{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        .features{
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+        .ratingWrapper{
+            background-color: #1C65A4;
+            width: 70px;
+            height: 70px;
+            border-radius: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .rating{
+                font-size: 25px;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+        .ratingComent{
+            font-size: 23px;
+            color: #73787E;
+            font-weight: 300;
+        }
 }
 .calendarStyle{
     width: 400px;
