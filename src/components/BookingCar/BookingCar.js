@@ -52,6 +52,7 @@ const getPrices = () => {
     }
 return(   
     <div className={styles.dataWrapper}>
+
         <div className={styles.bookingCarWrapper}>
             <div className={styles.bookinImgWrapper}>
                 <img className={styles.carImg} src={'/img/car-2.png'}></img>
@@ -62,6 +63,7 @@ return(
                 invalid={singleInvalid}
             />
         </div>
+
         <div className={styles.carInformationWrapper}>
             <div className={styles.modelWrapper}>
                 <p className={styles.model}>BMW i8</p>
@@ -115,6 +117,18 @@ return(
                         <p className={styles.features}>21 years</p>
                     </div>
                 </div>
+
+                <div className={styles.payWrap}>
+                    <div className={styles.paymentWrapper}>
+                            <p className={styles.titlePayment}>Pay Now</p>
+                            <p className={styles.price}>$655</p>
+                    </div>
+                    <div className={styles.paymentWrapper}>
+                            <p className={styles.titlePayment}>Pay Letter</p>
+                            <p className={styles.price}>$789</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>                     

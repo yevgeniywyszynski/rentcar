@@ -31,6 +31,34 @@
         display: flex;
         gap: 40px;
         margin-bottom: 20px;
+        .payWrap{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            .paymentWrapper{
+                background-color: #E9FFEF;
+                padding-left: 30px;
+                padding-right: 100px;
+                padding-top: 30px;
+                border: 2px solid #068323;
+                border-radius: 35px;
+                transition: 0.7s;
+                cursor: pointer;
+                .titlePayment{
+                    font-size: 35px;
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                }
+                .price{
+                    font-size: 25px;
+                }
+            }
+            .paymentWrapper:hover{
+                scale: (1.1);
+                background-color: #1C65A4;
+                color: #fff;
+            }
+        }
     }
     .wrapperIcon{
         display: flex;
