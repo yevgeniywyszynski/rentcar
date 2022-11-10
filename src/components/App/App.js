@@ -6,7 +6,7 @@ import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Cars from '../Cars/CarsContainer';
 import Portfolio from '../Portfolio/Portfolio';
-import BookingCar from '../BookingCar/BookingCar';
+import BookingCar from '../BookingCar/BookingCarContainer';
 
 function App() {
   return (
