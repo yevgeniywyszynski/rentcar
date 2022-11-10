@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     padding-left: 150px;
-    padding-right: 150px;
+    padding-right: 100px;
     padding-top: 50px;
     align-items: center;
 }
 .carInformationWrapper{
     padding-left: 150px;
+    padding-right: 100px;
     .modelWrapper{
         display: flex;
         align-items: center;
@@ -28,9 +29,9 @@
         margin-bottom: 20px;
     }
     .featuresWrapperBooks{
-        display: flex;
-        gap: 40px;
+        display: grid;
         margin-bottom: 20px;
+        grid-template-columns: 2fr 1.5fr 2fr 4fr;
         .payWrap{
             display: grid;
             gap: 20px;
@@ -38,25 +39,51 @@
             .paymentWrapper{
                 background-color: #E9FFEF;
                 padding-left: 30px;
-                padding-right: 100px;
-                padding-top: 30px;
+                padding-right: 40px;
+                padding-top: 20px;
+                padding-bottom: 20px;
                 border: 2px solid #068323;
                 border-radius: 35px;
                 transition: 0.7s;
                 cursor: pointer;
+                .payDescriptionWrapper{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    .payIcon{
+                        width: 80%;
+                    }
+                }
                 .titlePayment{
-                    font-size: 35px;
+                    font-size: 25px;
                     font-weight: 300;
                     margin-bottom: 10px;
                 }
                 .price{
-                    font-size: 25px;
+                    font-size: 20px;
+                }
+                .extrasInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    margin-top: 10px;
+                    transition: 0.7s;
+                    .extraIcon{
+                        width: 18px;
+                        height: 18px;
+                    }
+                    .titleExtraInfo{
+                        font-size: 13px;
+                        color: #000;
+                    }
                 }
             }
             .paymentWrapper:hover{
                 scale: (1.1);
                 background-color: #1C65A4;
                 color: #fff;
+                .titleExtraInfo{
+                    color: #fff;
+                }
             }
         }
     }
@@ -92,5 +119,6 @@
         }
 }
 .calendarStyle{
-    width: 400px;
+    width: 500px;
+    border: 1px solid #068323;
 }

@@ -120,12 +120,26 @@ return(
 
                 <div className={styles.payWrap}>
                     <div className={styles.paymentWrapper}>
-                            <p className={styles.titlePayment}>Pay Now</p>
+                            <div className={styles.payDescriptionWrapper}>
+                                <p className={styles.titlePayment}>Pay Now</p>
+                                <img className={styles.payIcon} src="/img/debit-card.png"></img>
+                            </div>
                             <p className={styles.price}>$655</p>
+                            <div className={styles.extrasInfo}>
+                                <img className={styles.extraIcon} src="/img/information.png" />
+                                <p className={styles.titleExtraInfo}>insurance is not included</p>
+                            </div>
                     </div>
                     <div className={styles.paymentWrapper}>
+                        <div className={styles.payDescriptionWrapper}>
                             <p className={styles.titlePayment}>Pay Letter</p>
-                            <p className={styles.price}>$789</p>
+                            <img className={styles.payIcon} src="/img/saving.png"></img>
+                        </div>
+                        <p className={styles.price}>$789</p>
+                        <div className={styles.extrasInfo}>
+                            <img className={styles.extraIcon} src="/img/check (1).png" />
+                            <p className={styles.titleExtraInfo}>price includes insurance</p>
+                        </div>
                     </div>
                 </div>
 
