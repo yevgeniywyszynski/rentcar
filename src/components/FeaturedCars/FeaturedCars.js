@@ -26,7 +26,7 @@ const FeaturedCars = ({allFutureCars}) => {
                                 <p className={styles.slideNumber}>{fc.idCar}</p>
                             </div>
                             <div className={styles.imgWrapper}>
-                                <img className={styles.imgCar} alt="car" src={'/img/car-4.png'}></img>
+                                <img className={styles.imgCar} alt="car" src={fc.imgCar}></img>
                                 <div className={styles.priceWrapper}>
                                     <p className={styles.priceBefore}>$80000.00</p>
                                     <p className={styles.priceAfter}>$70000.00</p>

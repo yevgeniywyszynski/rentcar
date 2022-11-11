@@ -76,3 +76,12 @@
         }
     }
 }
+
+@media(max-width: 1200px){
+    .cars{
+        .imgWrapper{
+            width: 250px;
+            height: 250px;
+        }
+    }
+}
