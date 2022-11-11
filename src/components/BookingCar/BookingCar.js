@@ -56,7 +56,8 @@ const getPrices = () => {
     }
 
     if(currentCar){
-        return (<div className={styles.dataWrapper}>
+        return (
+        <div className={styles.dataWrapper}>
 
             <div className={styles.bookingCarWrapper}>
                 <div className={styles.bookinImgWrapper}>
@@ -71,7 +72,7 @@ const getPrices = () => {
     
             <div className={styles.carInformationWrapper}>
                 <div className={styles.modelWrapper}>
-                    <p className={styles.model}>BMW i8</p>
+                    <p className={styles.model}>{currentCar.model}</p>
                     <div className={styles.wrapperIcon}>
                         <div className={styles.ratingWrapper}>
                             <p className={styles.rating}>{currentCar.rating}</p>
@@ -100,8 +101,8 @@ const getPrices = () => {
                     <div className={styles.featuresWrapper}>
                         <p className={styles.booksInfo}>Minimum age of driver</p>
                         <div className={styles.wrapperIcon}>
-                            <img className={styles.icon} src='/img/id-card.png'></img>
-                            <p className={styles.features}>21 years</p>
+                            <img className={styles.icon} src={currentCar.idIcon}></img>
+                            <p className={styles.features}>{currentCar.minDriverAge} years</p>
                         </div>
                     </div>
     
@@ -129,7 +130,7 @@ const getPrices = () => {
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>)
