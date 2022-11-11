@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import styles from '../BookingCar/BookingCar.module.scss';
 import {Datepicker, Eventcalendar} from "@mobiscroll/react";
 import "@mobiscroll/react/dist/css/mobiscroll.min.css";
+import EquipmentCar from "../EquipmentCar/EquipmentCar";
 
 const getCommentFromRating = (rating) => {
     if(rating > 8){
@@ -84,13 +85,7 @@ const getPrices = () => {
                     <div className={styles.featuresWrapper}>
                         <p className={styles.booksInfo}>Vehicle Features</p>
                     {currentCar.features.map((f)=>(
-                        //<CarFeature icon={f.icon} name={f.name}></CarFeature>
-                        <div>
-                            <div className={styles.wrapperIcon}>
-                                <img className={styles.icone} src={f.icon}></img>
-                                <p className={styles.features}>{f.name}</p>
-                            </div>
-                        </div>
+                        <EquipmentCar icon={f.icon} name={f.name}></EquipmentCar>
                     ))}
                 </div>
     
