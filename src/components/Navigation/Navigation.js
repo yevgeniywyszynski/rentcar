@@ -4,8 +4,7 @@ import {Link, useLocation} from 'react-router-dom';
 
 const Navigation = () => {
     const location = useLocation();
-    console.log('location', location)
-
+    
     return(
         <div className={`${styles.navigationMainPage} ${location.pathname === '/' ? styles.navigationWrapper : styles.navigationMainPage}`}>
             <div className={styles.logoWrapper}>

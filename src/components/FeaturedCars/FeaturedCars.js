@@ -5,8 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const FeaturedCars = ({allFutureCars}) => {
-    console.log('featuredCars',allFutureCars)
-
+    
     var settings = {
         dots: true,
         infinite: true,
@@ -19,9 +18,9 @@ const FeaturedCars = ({allFutureCars}) => {
     return(
         <div className={styles.carsWrapper}>
             <p className={styles.title}>Featured Cars</p>
-                <Slider {...settings}>
+                <Slider className={styles.slideWrapper} {...settings}>
                     {allFutureCars.map((fc) => (
-                        <div className={styles.cars}>
+                        <div key={fc.idCar} className={styles.cars}>
                             <div className={styles.circleWrapper}>
                                 <p className={styles.slideNumber}>{fc.idCar}</p>
                             </div>

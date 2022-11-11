@@ -1,6 +1,6 @@
 .carsWrapper{
     padding-left: 150px;
-    padding-right: 150px;
+    padding-right: 110px;
     margin-top: 70px;
     margin: 0 auto;
     .title{
@@ -73,15 +73,6 @@
                 font-weight: bold;
                 margin-bottom: 20px;
             }
-        }
-    }
-}
-
-@media(max-width: 1200px){
-    .cars{
-        .imgWrapper{
-            width: 250px;
-            height: 250px;
         }
     }
 }

@@ -1,5 +1,6 @@
 import { applyMiddleware, combineReducers, createStore, compose} from "redux";
 import carsRedux from '../redux/CarsRedux';
+import memberComentRedux from '../redux/MemberComentRedux';
 
 const initalState = {
     cars: [
@@ -441,11 +442,55 @@ const initalState = {
             rating: 7.6,
                 
         },
+    ],
+    membersComent:[
+        {
+            idMember: 1,
+            memberName: 'Jerry',
+            memberRole: 'Client',
+            memberImg: '/img/member1.png',
+            memberComent: 'many variations of passages of Lorem Ipsum avail',
+            likeIcon: '/img/like.png',
+        },
+        {
+            idMember: 2,
+            memberName: 'Stella',
+            memberRole: 'Client',
+            memberImg: '/img/member2.png',
+            memberComent: 'many variations of passages of Lorem Ipsum avail',
+            likeIcon: '/img/like.png',
+        },
+        {
+            idMember: 3,
+            memberName: 'Alfredo',
+            memberRole: 'Client',
+            memberImg: '/img/member5.png',
+            memberComent: 'ddewdwsedfvghbjknmcfvhgbjknmkfchvgbjknmkl rfytguyhujikedrtftygyuhujmany variations of passages of Lorem Ipsum availrfytveg bhfjknmlftgbyhjk nlmrftgybhnj kmfytgbhjkn mrftyguhnjmk wefnwejfbweufnwefnewlkfnewlkfnweln rtfygbhjknlm,dctfvghbjk nmdrctfvgyh bjknmrftygbhn of Lorem Ipsum availrfytvegbhfjknm',
+            likeIcon: '/img/like.png',
+        },
+        {
+            idMember: 4,
+            memberName: 'Viki',
+            memberRole: 'Client',
+            memberImg: '/img/member3.png',
+            memberComent: 'many variations of passages of Lorem Ipsum avail',
+            likeIcon: '/img/like.png',
+        },
+        {
+            idMember: 5,
+            memberName: 'Stefan',
+            memberRole: 'Client',
+            memberImg: '/img/member4.png',
+            memberComent: 'many variations of passages of Lorem Ipsum avail',
+            likeIcon: '/img/like.png',
+        },
+        
     ]
 }
 
 const reducers = {
     cars: carsRedux,
+    membersComent: memberComentRedux
 }
 
 const storeReducer = combineReducers(reducers);
