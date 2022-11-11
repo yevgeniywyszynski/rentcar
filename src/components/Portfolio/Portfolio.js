@@ -1,8 +1,11 @@
 import React from "react";
+import MemberComent from "../MemberComent/MemberComentContainer";
 import styles from '../Portfolio/Portfolio.module.scss';
 
 const Portfolio = () => {
     return(
+        <>
+
         <div className={styles.portfolioWrapper}>
             <div className={styles.awardWrapper}>
                 <img className={styles.iconImg} src={"img/carIcon.png"}></img>
@@ -25,6 +28,8 @@ const Portfolio = () => {
                 <p className={styles.qty}>11002+</p>
             </div>
         </div>
+        <MemberComent />
+        </>
     )
 }
 
