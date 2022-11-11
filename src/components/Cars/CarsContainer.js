@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
 import Cars from '../Cars/Cars';
-import { getAllCurrentCars } from "../../redux/CarsRedux";
+import { getAllFutureCars } from "../../redux/CarsRedux";
 
 const mapStateToProps = (state) => ({
-    allCars: getAllCurrentCars(state),
+    allCars: getAllFutureCars(state),
 })
 
 export default connect(mapStateToProps, null )(Cars);

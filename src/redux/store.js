@@ -32,7 +32,7 @@ const initalState = {
             }],
             minDriverAge: 21,
             idIcon: '/img/id-card.png',
-            isFuture: false, 
+            isFuture: true, 
             bookings :[
                 {"d":"2022-11-07T23:00:00.000Z","price":375},{"d":"2022-11-08T23:00:00.000Z","price":500},
                 {"d":"2022-11-09T23:00:00.000Z","price":0},{"d":"2022-11-10T23:00:00.000Z","price":125},
@@ -81,7 +81,7 @@ const initalState = {
             }],
             minDriverAge: 21,
             idIcon: '/img/id-card.png',
-            isFuture: false,
+            isFuture: true,
             bookings :[
                 {"d":"2022-11-07T23:00:00.000Z","price":375},{"d":"2022-11-08T23:00:00.000Z","price":500},
                 {"d":"2022-11-09T23:00:00.000Z","price":0},{"d":"2022-11-10T23:00:00.000Z","price":125},
@@ -129,7 +129,7 @@ const initalState = {
             }],
             minDriverAge: 27,
             idIcon: '/img/id-card.png',
-            isFuture: false,
+            isFuture: true,
             bookings :[
                 {"d":"2022-11-07T23:00:00.000Z","price":375},{"d":"2022-11-08T23:00:00.000Z","price":500},
                 {"d":"2022-11-09T23:00:00.000Z","price":0},{"d":"2022-11-10T23:00:00.000Z","price":125},
@@ -177,7 +177,7 @@ const initalState = {
             }],
             minDriverAge: 21,
             idIcon: '/img/id-card.png',
-            isFuture: false,
+            isFuture: true,
             bookings :[
                 {"d":"2022-11-07T23:00:00.000Z","price":375},{"d":"2022-11-08T23:00:00.000Z","price":500},
                 {"d":"2022-11-09T23:00:00.000Z","price":0},{"d":"2022-11-10T23:00:00.000Z","price":125},
