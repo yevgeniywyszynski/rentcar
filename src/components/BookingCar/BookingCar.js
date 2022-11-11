@@ -4,6 +4,7 @@ import styles from '../BookingCar/BookingCar.module.scss';
 import {Datepicker, Eventcalendar} from "@mobiscroll/react";
 import "@mobiscroll/react/dist/css/mobiscroll.min.css";
 import EquipmentCar from "../EquipmentCar/EquipmentCar";
+import Capacity from "../Capacity/Capacity";
 
 const getCommentFromRating = (rating) => {
     if(rating > 8){
@@ -91,19 +92,11 @@ const getPrices = () => {
     
                     <div className={styles.featuresWrapper}>
                         <p className={styles.booksInfo}>Capacity</p>
-                        <div className={styles.wrapperIcon}>
-                            <img className={styles.icon} src='/img/car-seat.png'></img>
-                            <p className={styles.features}>5 Seats</p>
-                        </div>
-                        <div className={styles.wrapperIcon}>
-                            <img className={styles.icon} src='/img/suitcase (1).png'></img>
-                            <p className={styles.features}>1 Suitcase</p>
-                        </div>
-                        <div className={styles.wrapperIcon}>
-                            <img className={styles.icon} src='/img/shopping-bag.png'></img>
-                            <p className={styles.features}>2 Bags</p>
-                        </div>
+                        {currentCar.capacity.map((cap) => (
+                            <Capacity icon={cap.icon} name={cap.name}></Capacity>
+                        ))}
                     </div>
+
                     <div className={styles.featuresWrapper}>
                         <p className={styles.booksInfo}>Minimum age of driver</p>
                         <div className={styles.wrapperIcon}>
