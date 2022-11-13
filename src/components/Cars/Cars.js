@@ -1,6 +1,6 @@
 import React from "react";
 import styles from '../Cars/Cars.module.scss';
-import FindCar from "../FindCar/FindCar";
+import FindCar from "../FindCar/FindCarContainer";
 import {Link} from 'react-router-dom';
 
 const Cars = ({allCars}) => {

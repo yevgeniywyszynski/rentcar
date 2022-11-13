@@ -61,7 +61,7 @@ const getPrices = () => {
 
             <div className={styles.bookingCarWrapper}>
                 <div className={styles.bookinImgWrapper}>
-                    <img className={styles.carImg} src={'/img/car-2.png'}></img>
+                    <img className={styles.carImg} src={currentCar.imgCar} alt="car"></img>
                 </div>
                 <Eventcalendar className={styles.calendarStyle}
                     controls={['calendar', 'time']}

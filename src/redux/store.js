@@ -1,12 +1,13 @@
 import { applyMiddleware, combineReducers, createStore, compose} from "redux";
 import carsRedux from '../redux/CarsRedux';
 import memberComentRedux from '../redux/MemberComentRedux';
+import searchRedux from '../redux/SearchRedux';
 
 const initalState = {
     cars: [
         {
             idCar: 1,
-            imgCar: 'img/car-1.png',
+            imgCar: '/img/car-1.png',
             carType: 'Sedan',
             price: 3000,
             model: 'TOYOTA',
@@ -55,7 +56,7 @@ const initalState = {
         },
         {
             idCar: 2,
-            imgCar: 'img/car-2.png',
+            imgCar: '/img/car-2.png',
             carType: 'Sport Car',
             price: 5000,
             model: 'BMW',
@@ -103,7 +104,7 @@ const initalState = {
         },
         {
             idCar: 3,
-            imgCar: 'img/car-3.png',
+            imgCar: '/img/car-3.png',
             carType: 'Sport Car',
             price: 10000,
             model: 'Ferarri',
@@ -151,7 +152,7 @@ const initalState = {
         },
         {
             idCar: 4,
-            imgCar: 'img/car-4.png',
+            imgCar: '/img/car-4.png',
             carType: 'SUV',
             price: 1600,
             model: 'AUDI',
@@ -199,7 +200,7 @@ const initalState = {
         },
         {
             idCar: 10,
-            imgCar: 'img/car-2.png',
+            imgCar: '/img/car-2.png',
             carType: 'Sedan',
             price: 3000,
             model: 'TOYOTA',
@@ -248,7 +249,7 @@ const initalState = {
         },
         {
             idCar: 11,
-            imgCar: 'img/car-2.png',
+            imgCar: '/img/car-2.png',
             carType: 'Sedan',
             price: 3000,
             model: 'TOYOTA',
@@ -297,7 +298,7 @@ const initalState = {
         },
         {
             idCar: 12,
-            imgCar: 'img/car-2.png',
+            imgCar: '/img/car-2.png',
             carType: 'Sedan',
             price: 3000,
             model: 'TOYOTA',
@@ -346,7 +347,7 @@ const initalState = {
         },
         {
             idCar: 13,
-            imgCar: 'img/car-2.png',
+            imgCar: '/img/car-2.png',
             carType: 'Sedan',
             price: 3000,
             model: 'TOYOTA',
@@ -395,7 +396,7 @@ const initalState = {
         },
         {
             idCar: 14,
-            imgCar: 'img/car-2.png',
+            imgCar: '/img/car-2.png',
             carType: 'Sedan',
             price: 3000,
             model: 'TOYOTA',
@@ -445,7 +446,7 @@ const initalState = {
     ],
     membersComent:[
         {
-            idMember: 1,
+            idMember: 1,  // zapisać jako id, name, role, img...
             memberName: 'Jerry',
             memberRole: 'Client',
             memberImg: '/img/member1.png',
@@ -485,12 +486,19 @@ const initalState = {
             likeIcon: '/img/like.png',
         },
         
-    ]
+    ],
+    search:{
+        searchActive: false,
+        keyword: '',
+        typeCar: '',
+        rating: '',
+    }
 }
 
 const reducers = {
     cars: carsRedux,
-    membersComent: memberComentRedux
+    membersComent: memberComentRedux,
+    search: searchRedux
 }
 
 const storeReducer = combineReducers(reducers);

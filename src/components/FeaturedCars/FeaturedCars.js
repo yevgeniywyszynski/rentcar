@@ -17,7 +17,7 @@ const FeaturedCars = ({allFutureCars}) => {
 
     return(
         <div className={styles.carsWrapper}>
-            <p className={styles.title}>Featured Cars</p>
+            <p className={styles.title}>Future Cars</p>
                 <Slider className={styles.slideWrapper} {...settings}>
                     {allFutureCars.map((fc) => (
                         <div key={fc.idCar} className={styles.cars}>
