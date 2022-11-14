@@ -1,13 +1,11 @@
 import React from "react";
 import styles from './Footer.module.scss';
-import { FaFacebookF,FaLinkedinIn,FaGooglePlusG, FaTwitter, FaPhone } from "react-icons/fa";
-import SocialMedia from "../SocialMedia/SocialMedia";
 
 const Footer = () => {
     return(
-        <>
-        <SocialMedia />
-        <footer className={styles.footerWrapper}>
+    <footer className={styles.footerContainer}>
+        <div className={styles.footerWrapper}>
+
             <div className={styles.footerContainer}>
                 <p className={styles.footerTitle}>CONTACT INFO</p>
                 <p className={styles.informationContact}>
@@ -38,16 +36,15 @@ const Footer = () => {
                     <button type="btn" className={styles.btnNewslatter}>SUBSCRBE</button>
                 </div>
             </div>
-
-        </footer>
+        </div>
 
         <div className={styles.developerWrapper}>
             <div className={styles.developerName}>
                 <a href="#"className={styles.developerLink}>ywyszynski, All Rights Reserved</a>
             </div>
         </div>
-        
-        </>
+
+    </footer>
     )
 }
 

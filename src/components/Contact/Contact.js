@@ -1,5 +1,6 @@
 import React from "react";
 import styles from '../Contact/Contact.module.scss';
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const Contact = () => {
     return(
@@ -40,6 +41,8 @@ const Contact = () => {
                     <img className={styles.imgContact} src={'img/formimg.png'} alt="cars"></img>
                 </div>
             </div>
+
+            <SocialMedia />
         </div>
     )
 }

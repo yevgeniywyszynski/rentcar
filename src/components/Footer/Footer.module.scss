@@ -1,48 +1,50 @@
-.footerWrapper{
+.footerContainer{
     background-color: #1a1a1a;
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
     padding-left: 40px;
     padding-right: 60px;
-    gap: 10px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    .footerContainer{
-        .footerTitle{
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 300;
-        }
-        .informationContact{
-            line-height: 20px;
-            font-weight: 300;
-
-        }
-        .footerDescription{
-            line-height: 20px;
-            font-weight: 300;
-        }
-        .newslatterWrapper{
-            line-height: 20px;
-            font-weight: 300;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            .newsletterInput{
-                padding: 10px 30px;
-                font-size: 16px;
-                font-weight: bold;
-                border: none;
-                border-radius: 4px;
+    padding-bottom: 40px;
+    .footerWrapper{
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        gap: 10px;
+        padding-top: 60px;
+        .footerContainer{
+            .footerTitle{
+                font-size: 20px;
+                margin-bottom: 15px;
+                font-weight: 300;
             }
-            .btnNewslatter{
-                background-color: #03de1c;
-                border: none;
-                padding: 10px 20px;
-                color: #fff;
-                border-radius: 4px;
+            .informationContact{
+                line-height: 20px;
+                font-weight: 300;
+    
+            }
+            .footerDescription{
+                line-height: 20px;
+                font-weight: 300;
+            }
+            .newslatterWrapper{
+                line-height: 20px;
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .newsletterInput{
+                    padding: 10px 30px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 4px;
+                }
+                .btnNewslatter{
+                    background-color: #03de1c;
+                    border: none;
+                    padding: 10px 20px;
+                    color: #fff;
+                    border-radius: 4px;
+                }
             }
         }
     }
