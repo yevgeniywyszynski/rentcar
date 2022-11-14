@@ -8,7 +8,7 @@ const initalState = {
         {
             idCar: 1,
             imgCar: '/img/car-1.png',
-            carType: 'Sedan',
+            carType: 'sedan',
             price: 3000,
             model: 'TOYOTA',
             features: [{
@@ -57,7 +57,7 @@ const initalState = {
         {
             idCar: 2,
             imgCar: '/img/car-2.png',
-            carType: 'Sport Car',
+            carType: 'sport',
             price: 5000,
             model: 'BMW',
             features: [{
@@ -105,7 +105,7 @@ const initalState = {
         {
             idCar: 3,
             imgCar: '/img/car-3.png',
-            carType: 'Sport Car',
+            carType: 'sport',
             price: 10000,
             model: 'Ferarri',
             features: [{
@@ -153,7 +153,7 @@ const initalState = {
         {
             idCar: 4,
             imgCar: '/img/car-4.png',
-            carType: 'SUV',
+            carType: 'suv',
             price: 1600,
             model: 'AUDI',
             features: [{
@@ -201,7 +201,7 @@ const initalState = {
         {
             idCar: 10,
             imgCar: '/img/car-2.png',
-            carType: 'Sedan',
+            carType: 'sedan',
             price: 3000,
             model: 'TOYOTA',
             features: [{
@@ -250,7 +250,7 @@ const initalState = {
         {
             idCar: 11,
             imgCar: '/img/car-2.png',
-            carType: 'Sedan',
+            carType: 'sedan',
             price: 3000,
             model: 'TOYOTA',
             features: [{
@@ -299,7 +299,7 @@ const initalState = {
         {
             idCar: 12,
             imgCar: '/img/car-2.png',
-            carType: 'Sedan',
+            carType: 'sedan',
             price: 3000,
             model: 'TOYOTA',
             features: [{
@@ -348,7 +348,7 @@ const initalState = {
         {
             idCar: 13,
             imgCar: '/img/car-2.png',
-            carType: 'Sedan',
+            carType: 'sedan',
             price: 3000,
             model: 'TOYOTA',
             features: [{
@@ -397,7 +397,7 @@ const initalState = {
         {
             idCar: 14,
             imgCar: '/img/car-2.png',
-            carType: 'Sedan',
+            carType: 'sedan',
             price: 3000,
             model: 'TOYOTA',
             features: [{

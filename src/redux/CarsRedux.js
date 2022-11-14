@@ -5,7 +5,16 @@ export const getAllCurrentCars = ({cars, search}) => {
     if(search.searchActive){
         result = result.filter(c=>c.model.toLowerCase().includes(search.keyword.toLowerCase()))
     }
+    
+    if(search.typeCar.length > 0) {
+        if(search.typeCar === "suv"){
+            result = result.filter(car => car.carType == "suv")
+        } else if (search.typeCar === "sedan"){
+            result = result.filter(car => car.carType == "sedan")
+        }
+    }
     return result
+    
 }
 export const getAllFutureCars = ({cars}) => cars.filter(c => c.isFuture)//beda dostepne
 

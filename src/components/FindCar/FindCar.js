@@ -16,6 +16,7 @@ const FindCar = ({setSearch}) => {
             typeCar: typeCar,
             rating: rating
         }
+        console.log('obj', newObj)
         setSearch(newObj)
     }
     
