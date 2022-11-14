@@ -6,6 +6,7 @@ import FeaturedCars from "../FeaturedCars/FeaturedCarsContainer";
 import styles from '../Home/Home.module.scss';
 import Portfolio from "../Portfolio/Portfolio";
 import Welcome from "../Welcome/Welcome";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
     return(
@@ -16,6 +17,7 @@ const Home = () => {
             <FeaturedCars />
             <Portfolio />
             <Contact />
+            <Footer />
         </div>
     )
 }
