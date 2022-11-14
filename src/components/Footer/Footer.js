@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div className={styles.developerWrapper}>
             <div className={styles.developerName}>
-                <a href="#"className={styles.developerLink}>ywyszynski, All Rights Reserved</a>
+                <a href="#"className={styles.developerLink}>@ywyszynski, All Rights Reserved</a>
             </div>
         </div>
 
