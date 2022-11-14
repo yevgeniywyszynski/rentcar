@@ -1,0 +1,50 @@
+.contactWrapper{
+    background-color: #edeeed;
+    padding-left: 150px;
+    padding-right: 110px;
+    .title{
+        font-size: 60px;
+        margin-bottom: 40px;
+    }
+    .formWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        .inputWrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .contactDate{
+                padding: 10px 10px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #000;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .message{
+                font-size: 13px;
+                padding: 10px;
+                font-weight: 300;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #000;
+                resize: none;
+            }
+            .btnWrapper{
+                .sendBtn{
+                    padding: 7px 30px;
+                    color: #fff;
+                    background-color: #000;
+                    border: none;
+                    border-radius: 4px;
+                }
+            }
+        }
+        .imgWrapper{
+            .imgContact{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -510,10 +510,3 @@ const store = createStore (
 )
 
 export default store;
-
-/*
-1. map dla Capacity //done
-2. wynieść CarFeatures i Capacity do oddzielnych komponentów //done
-3. Uzupełnić dane dla reszty samochodów. //done
-4. Podmienić pozostałe pola w BookingCar na te z Reduxa
-*/

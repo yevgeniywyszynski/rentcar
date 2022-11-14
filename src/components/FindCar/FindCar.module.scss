@@ -25,7 +25,7 @@
         text-align: end;
         margin-top: 20px;
         .btn{
-            padding: 7px 35px;
+            padding: 7px 15px;
             border: none;
             background-color: #03de1c;
             color: #fff;
@@ -35,6 +35,20 @@
             transition: 0.7s;
         }
         .btn:hover{
+            scale: (1.1);
+        }
+        .btnReset{
+            padding: 7px 15px;
+            border: none;
+            background-color: #318CE7;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 100;
+            cursor: pointer;
+            transition: 0.7s;
+            margin-right: 10px;
+        }
+        .btnReset:hover{
             scale: (1.1);
         }
     }

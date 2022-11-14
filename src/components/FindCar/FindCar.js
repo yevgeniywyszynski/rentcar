@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import styles from '../FindCar/FindCar.module.scss';
+import { FaSearch, FaTimes } from "react-icons/fa";
+
 
 const FindCar = ({setSearch}) => {
 
     const [keyword, setKeyworad] = useState('')
     const [typeCar, setTypeCar] = useState('')
     const [rating, setRating] = useState('')
-
-    console.log('typeCar', typeCar)
 
     const search = () => {
         const newObj = {
@@ -62,17 +62,17 @@ const FindCar = ({setSearch}) => {
             <div className={styles.btnWrapper}>
             <button 
                     type="button" 
-                    className={styles.btn}
+                    className={styles.btnReset}
                     onClick={resetFilters}
                     >
-                    Reset Filters
+                    <FaTimes />
                     </button>
                 <button 
                     type="button" 
                     className={styles.btn}
                     onClick={search}
                     >
-                    Search
+                    <FaSearch />
                     </button>
             </div>
         </div>
