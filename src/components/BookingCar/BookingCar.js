@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import styles from '../BookingCar/BookingCar.module.scss';
-import {Datepicker, Eventcalendar} from "@mobiscroll/react";
-import "@mobiscroll/react/dist/css/mobiscroll.min.css";
 import EquipmentCar from "../EquipmentCar/EquipmentCar";
 import Capacity from "../Capacity/Capacity";
+
+import Calendar from 'react-select-date';
 
 const getCommentFromRating = (rating) => {
     if(rating > 8){
@@ -15,45 +15,15 @@ const getCommentFromRating = (rating) => {
 }
 
 const BookingCar = ({cars}) => {
-    console.log('cars', cars)
 
     let {id} = useParams()
-    const [singleLabels, setSingleLabels] = useState([]);
-    const [singleInvalid, setSingleInvalid] = useState([]);
     const [currentCar, setCurrentCar] = useState(null)
+    const [rangeDate, setRangeDate] = useState();
 
 
 useEffect(()=>{
     setCurrentCar(cars.find(e=> e.idCar == id))
 }, [cars])
-
-useEffect(()=>{
-    if(currentCar){
-        getPrices()
-    }
-},[currentCar])
-
-const getPrices = () => {
-    const invalid = [];
-    const labels = [];
-    
-    for (const booking of currentCar.bookings) {
-            const d = new Date(booking.d);
-
-            if (booking.price > 0) {
-                labels.push({
-                    start: d,
-                    title: '$' + booking.price,
-                    textColor: '#e1528f'
-                });
-            } else {
-                invalid.push(d);
-            }
-        }
-        setSingleInvalid(invalid)
-        setSingleLabels(labels)
-
-    }
 
     if(currentCar){
         return (
@@ -63,10 +33,15 @@ const getPrices = () => {
                 <div className={styles.bookinImgWrapper}>
                     <img className={styles.carImg} src={currentCar.imgCar} alt="car"></img>
                 </div>
-                <Eventcalendar className={styles.calendarStyle}
-                    controls={['calendar', 'time']}
-                    labels={singleLabels}
-                    invalid={singleInvalid}
+                <Calendar 
+                    className={styles.calendarStyle}
+                    onSelect = {(date) => setRangeDate(date)}
+                    selectDateType = 'range'
+                    defaultValue = {{
+                    startDate : '2022-11-11',
+                    endDate : '2022-11-25'
+                    }}
+                    disableCertainDates = {['2022-11-27','2022-11-26']}
                 />
             </div>
     

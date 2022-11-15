@@ -46,18 +46,18 @@ const FindCar = ({setSearch}) => {
                     onChange={e=>setKeyworad(e.target.value)}
                     >
                     </input>
-                <select onChange={e=>setTypeCar(e.target.value)}className={styles.inputData} name="type" id="type">
-                    <option value={typeCar} disabled selected>Type Car</option>
+                <select value={typeCar} onChange={e=>setTypeCar(e.target.value)}className={styles.inputData} name="type" id="type">
+                    <option value={''} disabled selected>Type Car</option>
                     <option value={"suv"}>SUV</option>
                     <option value={"sedan"}>Sedan</option>
                     <option value={"sport"}>Sport Car</option>
                 </select>
-                <select onChange={e=>setRating(e.target.value)}className={styles.inputData} name="rating" id="ratings">
-                    <option value={rating} disabled selected>Rating</option>
-                    <option value="me3">{">3"}</option>
-                    <option value="me5">{">5"}</option>
-                    <option value="me7">{">7"}</option>
-                    <option value="me9">{">9"}</option>
+                <select value={rating} onChange={e=>setRating(e.target.value)}className={styles.inputData} name="rating" id="ratings">
+                    <option value={''} disabled selected>Rating</option>
+                    <option value="3">{">3"}</option>
+                    <option value="5">{">5"}</option>
+                    <option value="7">{">7"}</option>
+                    <option value="9">{">9"}</option>
                 </select>
             </div>
             <div className={styles.btnWrapper}>
