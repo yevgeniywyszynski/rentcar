@@ -41,13 +41,31 @@ const calculatePrice = (date, oneDayPrice, bookings) => {
     return result
 }
 
+const formatDayEnd = () => {
+    let objectDate = new Date()
+    let endDay = objectDate.getDate() + 2
+    let month = objectDate.getMonth() + 1
+    let year = objectDate.getFullYear()
+    let endDate = `${year}-${month}-${endDay}`
+    return endDate
+}
+
+const formatDayStart = () => {
+    let objectDate = new Date()
+    let day = objectDate.getDate()
+    let month = objectDate.getMonth() + 1
+    let year = objectDate.getFullYear()
+    let startDate = `${year}-${month}-${day}`
+    return startDate
+}
+
 const BookingCar = ({cars}) => {
 
     let {id} = useParams()
     const [currentCar, setCurrentCar] = useState(null)
     const [rangeDate, setRangeDate] = useState();
     const [rentProposal, setRentProposal] = useState({})
-
+    
     useEffect(()=>{
         if(rangeDate && rangeDate.endDate){
             setRentProposal(calculatePrice(rangeDate, currentCar.price, currentCar.bookings))
@@ -72,10 +90,11 @@ useEffect(()=>{
                     onSelect = {(date) => setRangeDate(date)}
                     selectDateType = 'range'
                     defaultValue = {{
-                    startDate : '2022-11-11',
-                    endDate : '2022-11-25'
+                    startDate : formatDayStart(),
+                    endDate : formatDayEnd()
                     }}
                     disableCertainDates = {currentCar.bookings}
+                    templateClr="blue"
                 />
             </div>
     
