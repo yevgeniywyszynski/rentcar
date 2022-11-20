@@ -14,11 +14,45 @@ const getCommentFromRating = (rating) => {
     }
 }
 
+const calculatePrice = (date, oneDayPrice, bookings) => {
+    const {startDate, endDate} = date
+    let difTime = endDate - startDate
+    let dayDif = Math.floor(difTime/(1000*60*60*24)) + 1
+    let totalPrice = dayDif * oneDayPrice
+    let nOfNonActiveDays = 0;
+    bookings.forEach(date => {
+        let dateFormat = new Date(date)
+        if(dateFormat > startDate && dateFormat < endDate){ // pomiedzy zaznaczonym poczatkiem i konciem 
+            nOfNonActiveDays++
+        }
+    });
+    dayDif -= nOfNonActiveDays
+    let result = {
+        nOfDays: dayDif,
+        totalPrice: totalPrice,
+        discount: 0
+    }
+    if(dayDif > 7){
+        totalPrice *= 0.9 // promocja 10%
+        result.totalPrice = totalPrice
+        result.discount = 10
+    }
+    console.log(result)
+    return result
+}
+
 const BookingCar = ({cars}) => {
 
     let {id} = useParams()
     const [currentCar, setCurrentCar] = useState(null)
     const [rangeDate, setRangeDate] = useState();
+    const [rentProposal, setRentProposal] = useState({})
+
+    useEffect(()=>{
+        if(rangeDate && rangeDate.endDate){
+            setRentProposal(calculatePrice(rangeDate, currentCar.price, currentCar.bookings))
+        }
+    }, [rangeDate])
 
 
 useEffect(()=>{
@@ -41,7 +75,7 @@ useEffect(()=>{
                     startDate : '2022-11-11',
                     endDate : '2022-11-25'
                     }}
-                    disableCertainDates = {['2022-11-27','2022-11-26']}
+                    disableCertainDates = {currentCar.bookings}
                 />
             </div>
     
@@ -56,7 +90,7 @@ useEffect(()=>{
                     </div>
                 </div>
                 <p className={styles.booksInfo}>Rental Period</p>
-                <p className={styles.period}>6 days</p>
+                <p className={styles.period}>{rentProposal.nOfDays ? rentProposal.nOfDays: ''} days</p>
     
                 <div className={styles.featuresWrapperBooks}>
                     <div className={styles.featuresWrapper}>
@@ -87,7 +121,7 @@ useEffect(()=>{
                                     <p className={styles.titlePayment}>Pay Now</p>
                                     <img className={styles.payIcon} src="/img/debit-card.png"></img>
                                 </div>
-                                <p className={styles.price}>$655</p>
+                                <p className={styles.price}>${rentProposal.totalPrice ? rentProposal.totalPrice: ''}</p>
                                 <div className={styles.extrasInfo}>
                                     <img className={styles.extraIcon} src="/img/information.png" />
                                     <p className={styles.titleExtraInfo}>insurance is not included</p>
@@ -98,7 +132,7 @@ useEffect(()=>{
                                 <p className={styles.titlePayment}>Pay Letter</p>
                                 <img className={styles.payIcon} src="/img/saving.png"></img>
                             </div>
-                            <p className={styles.price}>$789</p>
+                            <p className={styles.price}>${rentProposal.totalPrice ? rentProposal.totalPrice+rentProposal.totalPrice*0.1: ''}</p>
                             <div className={styles.extrasInfo}>
                                 <img className={styles.extraIcon} src="/img/check (1).png" />
                                 <p className={styles.titleExtraInfo}>price includes insurance</p>
