@@ -331,7 +331,7 @@ const initalState = {
             memberName: 'Alfredo',
             memberRole: 'Client',
             memberImg: '/img/member5.png',
-            memberComent: 'ddewdwsedfvghbjknmcfvhgbjknmkfchvgbjknmkl rfytguyhujikedrtftygyuhujmany variations of passages of Lorem Ipsum availrfytveg bhfjknmlftgbyhjk nlmrftgybhnj kmfytgbhjkn mrftyguhnjmk wefnwejfbweufnwefnewlkfnewlkfnweln rtfygbhjknlm,dctfvghbjk nmdrctfvgyh bjknmrftygbhn of Lorem Ipsum availrfytvegbhfjknm',
+            memberComent: 'This portal was inspired by many things that have happened in my life since releasing my last album. I want people to feel hope and to know you will come out the other side stronger and a better version of yourself.',
             likeIcon: '/img/like.png',
         },
         {

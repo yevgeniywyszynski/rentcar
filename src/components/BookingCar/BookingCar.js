@@ -111,7 +111,9 @@ useEffect(()=>{
                     </div>
                 </div>
                 <p className={styles.booksInfo}>Rental Period</p>
-                <p className={styles.period}>{rentProposal.nOfDays ? rentProposal.nOfDays: ''} days</p>
+                <div className={styles.rentDayWrapper}>
+                    <p className={styles.period}>{rentProposal.nOfDays ? rentProposal.nOfDays: ''} days</p>  
+                </div>
     
                 <div className={styles.featuresWrapperBooks}>
                     <div className={styles.featuresWrapper}>
