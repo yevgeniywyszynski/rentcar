@@ -12,6 +12,7 @@ const CreditCard = () => {
     const [number, setNumber] = useState('')
 
     return(
+    <div className={styles.pageCardWrapper}>
         <div className={styles.cardWrapper}>
 
             <div className={styles.rccs__card }>
@@ -67,8 +68,14 @@ const CreditCard = () => {
                         />
                     </div>
                 </div>
+                <div className={styles.btnPayWrapper}>
+                    <button className={styles.btnPay}>
+                        Pay
+                    </button>
+                </div>
             </form>
         </div>
+    </div>
     )
 }
 

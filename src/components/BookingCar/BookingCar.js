@@ -5,6 +5,7 @@ import EquipmentCar from "../EquipmentCar/EquipmentCar";
 import Capacity from "../Capacity/Capacity";
 
 import Calendar from 'react-select-date';
+import CreditCard from "../CreditCard/CreditCard";
 
 const getCommentFromRating = (rating) => {
     if(rating > 8){
@@ -65,6 +66,7 @@ const BookingCar = ({cars}) => {
     const [currentCar, setCurrentCar] = useState(null)
     const [rangeDate, setRangeDate] = useState();
     const [rentProposal, setRentProposal] = useState({})
+    const [showPayment, setShowePayment] = useState(false)
     
     useEffect(()=>{
         if(rangeDate && rangeDate.endDate){
@@ -136,7 +138,9 @@ useEffect(()=>{
     
                     <div className={styles.payWrap}>
                         <div className={styles.paymentWrapper}>
-                                <div className={styles.payDescriptionWrapper}>
+                                <div className={styles.payDescriptionWrapper}
+                                    onClick={() => setShowePayment(true)}
+                                    >
                                     <p className={styles.titlePayment}>Pay Now</p>
                                     <img className={styles.payIcon} src="/img/debit-card.png"></img>
                                 </div>
@@ -158,8 +162,8 @@ useEffect(()=>{
                             </div>
                         </div>
                     </div>
-
                 </div>
+                {showPayment ? <CreditCard/> : null}
             </div>
         </div>)
     } else {
