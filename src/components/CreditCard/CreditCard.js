@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import styles from '../CreditCard/CreditCard.module.scss';
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/lib/styles.scss';
+import { FaTimes } from "react-icons/fa";
 
 
-const CreditCard = () => {
+const CreditCard = ({setShowePayment}) => {
     const [cvc, setCvc] = useState('')
     const [expiry, setExpiry] = useState('')
     const [focus, setFocus] = useState('')
@@ -26,6 +27,9 @@ const CreditCard = () => {
             </div>
 
             <form>
+                <div className={styles.closeBtnWrapper}>
+                    <button onClick={() => setShowePayment(false)}className={styles.btnClose}><FaTimes className={styles.iconClose}/></button>
+                </div>
                 <div className={styles.inputCardWrapper}>
         	        <input
                         type="text"

@@ -150,7 +150,9 @@ useEffect(()=>{
                                     <p className={styles.titleExtraInfo}>insurance is not included</p>
                                 </div>
                         </div>
-                        <div className={styles.paymentWrapper}>
+                        <div className={styles.paymentWrapper}
+                            onClick={() => setShowePayment(true)}
+                            >
                             <div className={styles.payDescriptionWrapper}>
                                 <p className={styles.titlePayment}>Pay Letter</p>
                                 <img className={styles.payIcon} src="/img/saving.png"></img>
@@ -163,7 +165,7 @@ useEffect(()=>{
                         </div>
                     </div>
                 </div>
-                {showPayment ? <CreditCard/> : null}
+                {showPayment ? <CreditCard setShowePayment={setShowePayment}/> : null}
             </div>
         </div>)
     } else {
