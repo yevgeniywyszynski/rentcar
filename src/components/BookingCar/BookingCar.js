@@ -43,8 +43,8 @@ const calculatePrice = (date, oneDayPrice, bookings) => {
 }
 
 const formatDayEnd = () => {
-    let objectDate = new Date()
-    let endDay = objectDate.getDate() + 2
+    let objectDate = new Date(new Date().getTime() + 2*24*60*60*1000)
+    let endDay = objectDate.getDate()
     let month = objectDate.getMonth() + 1
     let year = objectDate.getFullYear()
     let endDate = `${year}-${month}-${endDay}`
