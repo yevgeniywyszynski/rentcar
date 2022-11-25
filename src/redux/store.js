@@ -352,6 +352,8 @@ const initalState = {
         },
         
     ],
+    carsToShow: [],
+    
     search:{
         searchActive: false,
         keyword: '',
@@ -375,3 +377,6 @@ const store = createStore (
 )
 
 export default store;
+
+// GET localhost/cars?page=1 => dostajemy 4
+// GET localhost/search?keyword=Audi&type=Sedan&rating=none

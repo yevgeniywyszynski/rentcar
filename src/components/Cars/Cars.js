@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from '../Cars/Cars.module.scss';
 import FindCar from "../FindCar/FindCarContainer";
 import {Link} from 'react-router-dom';
 
 const Cars = ({allCars}) => {
+    const [page, setPage] = useState(1)
+    const [carsToShow, setCarsToShow] = useState([])
+    useEffect(()=>{
+        setCarsToShow(allCars(page))
+    },[page])
+
     return(
         <div className={styles.carsWrapper}>
             <FindCar />
             <p className={styles.title}>Our Cars</p>
             <div className={styles.carsViewWrapper}>
-                {allCars.map(cars => (
+                {carsToShow.map(cars => (
                 <div key={cars.idCar} className={styles.cars}>
                     <img className={styles.carImg} src={cars.imgCar} alt="carView"></img>
                     <div className={styles.carDetailsWrapper}>
@@ -23,7 +29,7 @@ const Cars = ({allCars}) => {
                 ))}
             </div>
             <div className={styles.btnWrapper}>
-                <button type="button" className={styles.btnMore}>See More</button>
+                <button type="button" onClick={() => setPage(page+1)} className={styles.btnMore}>See More</button>
             </div>
         </div>
     )
