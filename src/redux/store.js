@@ -1,7 +1,9 @@
 import { applyMiddleware, combineReducers, createStore, compose} from "redux";
+import thunk from 'redux-thunk';
 import carsRedux from '../redux/CarsRedux';
 import memberComentRedux from '../redux/MemberComentRedux';
 import searchRedux from '../redux/SearchRedux';
+import carsToShowRedux from '../redux/CarsToShowRedux';
 
 const initalState = {
     cars: [
@@ -352,7 +354,15 @@ const initalState = {
         },
         
     ],
-    carsToShow: [],
+
+    carsToShow: {
+        request:{
+            pending: null,
+            success: null,
+            error: null
+        },
+        data: []
+    },
     
     search:{
         searchActive: false,
@@ -365,7 +375,8 @@ const initalState = {
 const reducers = {
     cars: carsRedux,
     membersComent: memberComentRedux,
-    search: searchRedux
+    search: searchRedux,
+    carsToShow: carsToShowRedux
 }
 
 const storeReducer = combineReducers(reducers);
@@ -373,7 +384,7 @@ const storeReducer = combineReducers(reducers);
 const store = createStore (
     storeReducer,
     initalState,
-    compose(applyMiddleware(), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+    compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 )
 
 export default store;

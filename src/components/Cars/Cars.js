@@ -3,12 +3,18 @@ import styles from '../Cars/Cars.module.scss';
 import FindCar from "../FindCar/FindCarContainer";
 import {Link} from 'react-router-dom';
 
-const Cars = ({allCars}) => {
+const Cars = ({allCars, downloadedCarsToShow, loadCars}) => {
     const [page, setPage] = useState(1)
     const [carsToShow, setCarsToShow] = useState([])
     useEffect(()=>{
         setCarsToShow(allCars(page))
     },[page])
+    
+    useEffect(() => {
+        loadCars()
+    },[])
+
+    console.log('pobraneCars', downloadedCarsToShow);
 
     return(
         <div className={styles.carsWrapper}>
