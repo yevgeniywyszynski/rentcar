@@ -18,13 +18,13 @@ export const errorRequest = payload => ({ payload, type: ERROR_REQUEST });
 
 export const loadAllCarsToShow = payload => ({payload, type: LOAD_ALLCARSTOSHOW});
 
-export const loadCarsToShow = () => {
+export const requestCarsToShow = (pageId) => {
     return async dispatch => {
         dispatch(startRequest());
 
         try {
-            let carsToShow = await axios.get('http://localhost:8000/current')
-            dispatch(loadAllCarsToShow(carsToShow.cars))
+            let carsToShow = await axios.get(`http://localhost:8000/current?page=${pageId}`)
+            dispatch(loadAllCarsToShow(carsToShow.data));
             dispatch(endRequest())
         } catch(e) {
             console.log(e)
@@ -37,7 +37,7 @@ export const loadCarsToShow = () => {
 export default function reducer(statePart = [], action = {}) {
     switch(action.type) {
         case LOAD_ALLCARSTOSHOW:
-            return {...statePart, data: action.payload}
+            return {...statePart, data: [...statePart.data, action.payload]}
         case START_REQUEST:
             return {...statePart, request: {pending: true, error: null, success: false}}
         case END_REQUEST: 

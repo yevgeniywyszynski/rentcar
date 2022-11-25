@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Cars from '../Cars/Cars';
 import { getAllCurrentCars } from "../../redux/CarsRedux";
-import { getCarsToShow, loadCarsToShow } from '../../redux/CarsToShowRedux';
+import { getCarsToShow, requestCarsToShow } from '../../redux/CarsToShowRedux';
 
 const mapStateToProps = (state) => ({
     allCars: (page) => getAllCurrentCars(state,page),
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDisptachToProps = dispatch => ({
-    loadCars: () => dispatch(loadCarsToShow()),
+    requestCarsToShow: (page) => dispatch(requestCarsToShow(page)),
 })
 
 export default connect(mapStateToProps, mapDisptachToProps )(Cars);
