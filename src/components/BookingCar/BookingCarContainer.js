@@ -1,9 +1,11 @@
 import { connect } from "react-redux";
 import BookingCar from '../BookingCar/BookingCar';
-import { getAllCurrentCars } from "../../redux/CarsRedux";
+import { allCars, requestGetAllCars } from '../../redux/CarsToShowRedux';
 
 const mapStateToProps = (state) => ({
-    cars: getAllCurrentCars(state),
+    cars: allCars(state),
 })
-
-export default connect(mapStateToProps, null )(BookingCar);
+const mapDisptachToProps = dispatch => ({
+    getAllCars: () => dispatch(requestGetAllCars()),
+})
+export default connect(mapStateToProps, mapDisptachToProps )(BookingCar);

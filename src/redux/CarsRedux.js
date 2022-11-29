@@ -2,7 +2,7 @@ export const getAllCurrentCars = ({cars, search}, page) => {
     let result = [...cars]
     console.log(`Get cars from page: ${page}`)
     result = result.filter(c => !c.isFuture)//dostepne teraz
-    result = result.filter((c, i)=> i<page*2)
+    // result = result.filter((c, i)=> i<page*2)
     
     if(search.searchActive){
         result = result.filter(c=>c.model.toLowerCase().includes(search.keyword.toLowerCase()))

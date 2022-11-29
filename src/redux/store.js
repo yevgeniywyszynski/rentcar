@@ -361,7 +361,8 @@ const initalState = {
             success: null,
             error: null
         },
-        data: []
+        data: [],
+        allCars: [],
     },
     
     search:{

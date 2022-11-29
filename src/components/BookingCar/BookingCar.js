@@ -9,37 +9,38 @@ import CreditCard from "../CreditCard/CreditCard";
 
 const getCommentFromRating = (rating) => {
     if(rating > 8){
-        return "Excellent"
+        return "Excellent";
     } else {
-        return "Good"
+        return "Good";
     }
-}
+};
 
 const calculatePrice = (date, oneDayPrice, bookings) => {
-    const {startDate, endDate} = date
-    let difTime = endDate - startDate
-    let dayDif = Math.floor(difTime/(1000*60*60*24)) + 1
-    let totalPrice = dayDif * oneDayPrice
+    const {startDate, endDate} = date;
+    let difTime = endDate - startDate;
+    let dayDif = Math.floor(difTime/(1000*60*60*24)) + 1;
+    let totalPrice = dayDif * oneDayPrice;
     let nOfNonActiveDays = 0;
     bookings.forEach(date => {
-        let dateFormat = new Date(date)
+        let dateFormat = new Date(date);
+
         if(dateFormat > startDate && dateFormat < endDate){ // pomiedzy zaznaczonym poczatkiem i konciem 
             nOfNonActiveDays++
-        }
+        };
     });
     dayDif -= nOfNonActiveDays
     let result = {
         nOfDays: dayDif,
         totalPrice: totalPrice,
         discount: 0
-    }
+    };
     if(dayDif > 7){
-        totalPrice *= 0.9 // promocja 10%
-        result.totalPrice = totalPrice
-        result.discount = 10
-    }
+        totalPrice *= 0.9; // promocja 10%
+        result.totalPrice = totalPrice;
+        result.discount = 10;
+    };
     console.log(result)
-    return result
+    return result;
 }
 
 const formatDayEnd = () => {
@@ -60,24 +61,28 @@ const formatDayStart = () => {
     return startDate
 }
 
-const BookingCar = ({cars}) => {
+const BookingCar = ({cars, getAllCars}) => {
 
     let {id} = useParams()
-    const [currentCar, setCurrentCar] = useState(null)
+    const [currentCar, setCurrentCar] = useState(null);
     const [rangeDate, setRangeDate] = useState();
-    const [rentProposal, setRentProposal] = useState({})
-    const [showPayment, setShowePayment] = useState(false)
+    const [rentProposal, setRentProposal] = useState({});
+    const [showPayment, setShowePayment] = useState(false);
     
     useEffect(()=>{
         if(rangeDate && rangeDate.endDate){
             setRentProposal(calculatePrice(rangeDate, currentCar.price, currentCar.bookings))
         }
-    }, [rangeDate])
+    }, [rangeDate]);
 
 
 useEffect(()=>{
     setCurrentCar(cars.find(e=> e.idCar == id))
-}, [cars])
+}, [cars]);
+
+useEffect(() => {
+    getAllCars();
+},[]);
 
     if(currentCar){
         return (

@@ -3,23 +3,19 @@ import styles from '../Cars/Cars.module.scss';
 import FindCar from "../FindCar/FindCarContainer";
 import {Link} from 'react-router-dom';
 
-const Cars = ({allCars, downloadedCarsToShow, requestCarsToShow}) => {
+const Cars = ({nextCarToShow, requestNextCarListToShow}) => {
     const [page, setPage] = useState(1)
-    const [carsToShow, setCarsToShow] = useState([])
     
     useEffect(()=>{
-        setCarsToShow(allCars(page))
-        requestCarsToShow(page)
+        requestNextCarListToShow(page)
     },[page])
-
-    console.log('carsToShowRequest', downloadedCarsToShow);
 
     return(
         <div className={styles.carsWrapper}>
             <FindCar />
             <p className={styles.title}>Our Cars</p>
             <div className={styles.carsViewWrapper}>
-                {carsToShow.map(cars => (
+                {nextCarToShow.map(cars => (
                 <div key={cars.idCar} className={styles.cars}>
                     <img className={styles.carImg} src={cars.imgCar} alt="carView"></img>
                     <div className={styles.carDetailsWrapper}>
