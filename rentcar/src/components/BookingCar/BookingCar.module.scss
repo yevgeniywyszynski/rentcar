@@ -1,6 +1,6 @@
 .bookingCarWrapper{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
     padding-left: 150px;
     padding-right: 100px;
     padding-top: 50px;
@@ -168,6 +168,28 @@
             padding-right: 70px;
             .rentDayWrapper {
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .dataWrapper {
+        .bookingCarWrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .carInformationWrapper {
+            .modelWrapper {
+                display: block;
+                .wrapperIcon {
+                    padding-left: 0;
+                    margin-top: 10px;
+                }
+            }
+            .booksInfo {
+                text-align: center;
+                margin-top: 10px;
             }
         }
     }

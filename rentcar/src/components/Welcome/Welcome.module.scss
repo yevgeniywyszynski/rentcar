@@ -67,3 +67,12 @@
         padding-right: 30px;
     }
 }
+
+@media(max-width: 450px) {
+    .welcomeWrapper {
+        .title {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+}
