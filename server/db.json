@@ -11,7 +11,7 @@
                     "icon": "/img/air-conditioner (1).png",
                     "name": "Air conditioning"
                   },
-                  
+
                   {
                     "icon": "/img/manual-transmission (2).png",
                     "name": "Air conditioning"
@@ -47,11 +47,57 @@
                 "rating": 7.6
               },
               {
-                "idCar": 7,
-                "imgCar": "/img/car-1.png",
+                "idCar": 95,
+                "imgCar": "/img/car-5.png",
                 "carType": "sedan",
-                "price": 75,
-                "model": "LADA",
+                "price": 130,
+                "model": "BMW",
+                "features": [
+                  {
+                    "icon": "/img/air-conditioner (1).png",
+                    "name": "Air conditioning"
+                  },
+                  
+                  {
+                    "icon": "/img/manual-transmission (2).png",
+                    "name": "Air conditioning"
+                  },
+                  {
+                    "icon": "/img/car-door.png",
+                    "name": "5 doors"
+                  }
+                ],
+                "capacity": [
+                  {
+                    "icon": "/img/car-seat.png",
+                    "name": "5 Seats"
+                  },
+                  {
+                    "icon": "/img/suitcase (1).png",
+                    "name": "1 Suicase"
+                  },
+                  {
+                    "icon": "/img/shopping-bag.png",
+                    "name": "2 bags"
+                  }
+                ],
+                "minDriverAge": 21,
+                "idIcon": "/img/id-card.png",
+                "isFuture": false,
+                "bookings": [
+                  "2023-01-12",
+                  "2023-01-13",
+                  "2023-01-14",
+                  "2023-01-15"
+                ],
+                "rating": 8.4
+              },
+              {
+                "idCar": 7,
+                "imgCar": "/img/car-6.png",
+                "carType": "sport",
+                "price": 189,
+                "model": "MERCEDES",
                 "features": [
                   {
                     "icon": "/img/air-conditioner (1).png",
@@ -84,12 +130,12 @@
                 "idIcon": "/img/id-card.png",
                 "isFuture": false,
                 "bookings": [
-                  "2022-11-05",
-                  "2022-11-04",
-                  "2022-11-03",
-                  "2022-11-02"
+                  "2023-01-02",
+                  "2023-01-03",
+                  "2023-01-04",
+                  "2023-01-05"
                 ],
-                "rating": 7.6
+                "rating": 9.6
               },
               {
                 "idCar": 2,
@@ -227,6 +273,96 @@
           "2022-11-19"
         ],
         "rating": 8.3
+      },
+      {
+        "idCar": 98,
+        "imgCar": "/img/car-7.png",
+        "carType": "sedan",
+        "price": 500,
+        "model": "BENTLEY",
+        "features": [
+          {
+            "icon": "/img/air-conditioner (1).png",
+            "name": "Air conditioning"
+          },
+          {
+            "icon": "/img/manual-transmission (2).png",
+            "name": "Air conditioning"
+          },
+          {
+            "icon": "/img/car-door.png",
+            "name": "5 doors"
+          }
+        ],
+        "capacity": [
+          {
+            "icon": "/img/car-seat.png",
+            "name": "5 Seats"
+          },
+          {
+            "icon": "/img/suitcase (1).png",
+            "name": "1 Suicase"
+          },
+          {
+            "icon": "/img/shopping-bag.png",
+            "name": "2 bags"
+          }
+        ],
+        "minDriverAge": 21,
+        "idIcon": "/img/id-card.png",
+        "isFuture": false,
+        "bookings": [
+          "2023-01-02",
+          "2023-01-03",
+          "2023-01-04",
+          "2023-01-05"
+        ],
+        "rating": 9.8
+      },
+      {
+        "idCar": 99,
+        "imgCar": "/img/car-8.png",
+        "carType": "suv",
+        "price": 145,
+        "model": "TOYOTA",
+        "features": [
+          {
+            "icon": "/img/air-conditioner (1).png",
+            "name": "Air conditioning"
+          },
+          {
+            "icon": "/img/manual-transmission (2).png",
+            "name": "Air conditioning"
+          },
+          {
+            "icon": "/img/car-door.png",
+            "name": "5 doors"
+          }
+        ],
+        "capacity": [
+          {
+            "icon": "/img/car-seat.png",
+            "name": "5 Seats"
+          },
+          {
+            "icon": "/img/suitcase (1).png",
+            "name": "1 Suicase"
+          },
+          {
+            "icon": "/img/shopping-bag.png",
+            "name": "2 bags"
+          }
+        ],
+        "minDriverAge": 21,
+        "idIcon": "/img/id-card.png",
+        "isFuture": false,
+        "bookings": [
+          "2023-01-02",
+          "2023-01-03",
+          "2023-01-04",
+          "2023-01-05"
+        ],
+        "rating": 8.9
       },
     {
       "idCar": 10,
