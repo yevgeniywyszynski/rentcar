@@ -33,7 +33,7 @@ const Cars = ({ nextCarToShow,
             setCarsToShow(nextCarToShow)
         }
     }, [search, nextCarToShow])
-    
+
 
     return(
         <div className={styles.carsWrapper}>
