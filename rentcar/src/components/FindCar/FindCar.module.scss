@@ -1,0 +1,67 @@
+.findWrapper{
+    width: 990px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 2px 5px 12px -1px rgba(66, 68, 90, 1);
+    padding-bottom: 20px;
+    border-radius: 35px;
+    .title{
+        font-size: 20px;
+        color: #03de1c;
+        margin-bottom: 25px;
+    }
+    .inputWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+    .inputData{
+        padding: 7px 20px;
+        font-size: 17px;
+        font-weight: 100;
+    }
+    .btnWrapper{
+        text-align: end;
+        margin-top: 20px;
+        .btn{
+            padding: 7px 15px;
+            border: none;
+            background-color: #03de1c;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 100;
+            cursor: pointer;
+            transition: 0.7s;
+        }
+        .btn:hover{
+            scale: (1.1);
+        }
+        .btnReset{
+            padding: 7px 15px;
+            border: none;
+            background-color: #318CE7;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 100;
+            cursor: pointer;
+            transition: 0.7s;
+            margin-right: 10px;
+        }
+        .btnReset:hover{
+            scale: (1.1);
+        }
+    }
+}
+
+/*media*/
+
+@media(max-width: 1100px) {
+    .findWrapper {
+        width: 70%;
+        .inputWrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.wrapperIcon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    .features{
+        font-size: 15px;
+        font-weight: 300;
+    }
+}

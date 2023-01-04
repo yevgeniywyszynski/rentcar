@@ -1,0 +1,37 @@
+.portfolioWrapper{
+    background-image: url('../../../public/img/infoback.png');
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    .awardWrapper{
+        .iconImg{
+            margin-bottom: 10px;
+        }
+        .awardTitle{
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+        .qty{
+            color: #09f419;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+
+/*media*/
+
+@media(max-width: 600px) {
+    .portfolioWrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
